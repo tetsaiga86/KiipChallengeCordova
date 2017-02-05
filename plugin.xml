@@ -16,6 +16,6 @@
     </config-file>
     <source-file src="src/android/KiipChallenge.java" target-dir="src/cordova-plugin-kiip-challenge/KiipChallenge" />
     <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
-    <resource-file src="aar/yourAarFile.aar" target="aar/yourAarFile.aar" />
+    <resource-file src="aar/kiipmobilechallengelibrary.aar" target="aar/kiipmobilechallengelibrary.aar" />
   </platform>
 </plugin>
