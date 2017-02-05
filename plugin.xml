@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-kiip-challenge" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>KiipChallenge</name>
+  <js-module name="KiipChallenge" src="www/KiipChallenge.js">
+    <clobbers target="cordova.plugins.KiipChallenge" />
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="KiipChallenge">
+        <param name="android-package" value="cordova-plugin-kiip-challenge.KiipChallenge" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml">
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    </config-file>
+    <source-file src="src/android/KiipChallenge.java" target-dir="src/cordova-plugin-kiip-challenge/KiipChallenge" />
+    <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
+    <resource-file src="aar/yourAarFile.aar" target="aar/yourAarFile.aar" />
+  </platform>
+</plugin>
